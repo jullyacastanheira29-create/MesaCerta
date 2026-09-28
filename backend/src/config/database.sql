@@ -1,46 +1,46 @@
 CREATE TABLE pessoa (
-    idPessoa SERIAL NOT NULL PRIMARY KEY,
-    nomePessoa VARCHAR NOT NULL,
-    emailPessoa VARCHAR NOT NULL UNIQUE,
-    senhaPessoa VARCHAR NOT NULL,
-    dataCadastro DATE NOT NULL
-);
-
-CREATE TABLE restaurante (
-    idRestaurante SERIAL NOT NULL PRIMARY KEY,
-    nomeRestaurante VARCHAR NOT NULL UNIQUE,
-    cnpjRestaurante VARCHAR NOT NULL UNIQUE,
-    telefoneRestaurante VARCHAR NOT NULL,
-    enderecoRestaurante VARCHAR NOT NULL,
-    horarioAbertura TIME NOT NULL,
-    horarioFechamento TIME NOT NULL
-);
-
-CREATE TABLE mesa (
-    idMesa SERIAL NOT NULL PRIMARY KEY,
-    numeroMesa VARCHAR NOT NULL,
-    capacidadeMesa INT NOT NULL,
-    statusReserva VARCHAR NOT NULL
+    idPessoa serial not null primary key,
+    nomePessoa varchar not null,
+    emailPessoa varchar not null unique,
+    senhaPessoa varchar not null,
+    dataCadastro date not null
 );
 
 CREATE TABLE cliente (
-    idCliente SERIAL NOT NULL PRIMARY KEY,
-    idPessoa INT NOT NULL UNIQUE REFERENCES pessoa(idPessoa)
+    idCliente serial not null primary key,
+    idPessoa int not null unique references pessoa(idPessoa)
 );
 
 CREATE TABLE proprietario (
-    idProprietaio SERIAL NOT NULL PRIMARY KEY,
-    idRestaurante INT NOT NULL REFERENCES restaurante(idRestaurante),
-    idPessoa INT NOT NULL UNIQUE REFERENCES pessoa(idPessoa)
+    idProprietaio serial not null primary key,
+    idRestaurante int not null references restaurante(idRestaurante),
+    idPessoa int not null unique references pessoa(idPessoa)
+);
+
+CREATE TABLE restaurante (
+    idrestaurante serial not null primary key,
+    nomeRestaurante varchar not null unique,
+    cnpjRestaurante varchar not null unique,
+    telefoneRestaurante varchar not null,
+    enderecoRestaurante varchar not null,
+    horarioAbertura time not null,
+    horarioFechamento time not null
 );
 
 CREATE TABLE reserva (
-    idReserva SERIAL NOT NULL PRIMARY KEY,
-    idRestaurante INT NOT NULL REFERENCES restaurante(idRestaurante),
-    idMesa INT NOT NULL REFERENCES mesa(idMesa),
-    dataReserva DATE NOT NULL,
-    horarioReserva TIME NOT NULL,
-    quantidadePessoasReserva INT NOT NULL,
-    statusReserva VARCHAR NOT NULL,
-    codigoReserva VARCHAR NOT NULL
+    idReserva serial not null primary key,
+    idRestaurante int not null references restaurante(idRestaurante),
+    idMesa int not null references mesa(idMesa),
+    dataReserva date not null,
+    horarioReserva time not null,
+    quantidadePessoasReserva int not null,
+    statusReserva varchar not null,
+    codigoReserva varchar not null
+);
+
+CREATE TABLE mesa (
+    idMesa serial not null primary key,
+    numeroMesa varchar not null,
+    capacidadeMesa int not null,
+    statusReserva varchar not null
 );
