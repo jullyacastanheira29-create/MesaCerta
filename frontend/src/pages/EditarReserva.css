@@ -1,0 +1,406 @@
+/* =========================================================
+   EDITAR RESERVA - MESACERTA
+   Padrão visual claro, sofisticado e moderno
+========================================================= */
+
+.editar-reserva-container {
+  min-height: calc(100vh - 80px);
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+
+  box-sizing: border-box;
+
+  padding: 70px 30px 90px;
+
+  background: #fffaf6;
+  color: #422c25;
+}
+
+/* =========================================================
+   CARD PRINCIPAL
+========================================================= */
+
+.editar-reserva-card {
+  width: 100%;
+  max-width: 720px;
+
+  background: #fffdfb;
+
+  border: 1px solid #eadbd2;
+  border-radius: 18px;
+
+  padding: 48px 50px;
+
+  box-sizing: border-box;
+
+  box-shadow: 0 10px 35px rgba(66, 44, 37, 0.07);
+}
+
+/* =========================================================
+   TOPO
+========================================================= */
+
+.editar-reserva-topo {
+  text-align: center;
+
+  padding-bottom: 32px;
+  margin-bottom: 32px;
+
+  border-bottom: 1px solid #eadbd2;
+}
+
+.editar-etiqueta {
+  display: inline-block;
+
+  margin-bottom: 10px;
+
+  color: #a14b3e;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}
+
+.editar-reserva-topo h1 {
+  margin: 0;
+
+  color: #4a2c25;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 38px;
+  font-weight: 500;
+
+  line-height: 1.2;
+}
+
+.editar-reserva-topo p {
+  margin: 10px 0 0;
+
+  color: #806960;
+
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* =========================================================
+   CAMPOS
+========================================================= */
+
+.campo {
+  display: flex;
+  flex-direction: column;
+
+  margin-bottom: 22px;
+}
+
+.campo label {
+  margin-bottom: 8px;
+
+  color: #5d433a;
+
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.campo input {
+  width: 100%;
+
+  min-height: 48px;
+
+  padding: 0 15px;
+
+  box-sizing: border-box;
+
+  border: 1px solid #dccbc1;
+  border-radius: 8px;
+
+  background: #fffdfa;
+
+  color: #4a2c25;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+
+  outline: none;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.campo input:hover {
+  border-color: #cbb3a7;
+}
+
+.campo input:focus {
+  border-color: #a14b3e;
+
+  background: #fff;
+
+  box-shadow: 0 0 0 3px rgba(161, 75, 62, 0.09);
+}
+
+/* Ajuste para os campos de data e horário */
+
+.campo input[type="date"],
+.campo input[type="time"] {
+  cursor: pointer;
+}
+
+/* =========================================================
+   ÁREA DOS BOTÕES
+========================================================= */
+
+.editar-reserva-acoes {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  gap: 12px;
+
+  margin-top: 32px;
+  padding-top: 28px;
+
+  border-top: 1px solid #eee1d9;
+}
+
+/* =========================================================
+   BOTÃO VOLTAR
+========================================================= */
+
+.botao-voltar {
+  min-height: 46px;
+
+  padding: 0 22px;
+
+  border: 1px solid #d9c6bb;
+  border-radius: 8px;
+
+  background: #f8eee8;
+
+  color: #5a3b32;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.botao-voltar:hover {
+  background: #f1e1d8;
+  border-color: #cdb5a9;
+
+  transform: translateY(-2px);
+}
+
+/* =========================================================
+   BOTÃO SALVAR
+========================================================= */
+
+.botao-salvar {
+  min-height: 46px;
+
+  padding: 0 24px;
+
+  border: 1px solid #4a2c25;
+  border-radius: 8px;
+
+  background: #4a2c25;
+
+  color: #fffaf6;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.botao-salvar:hover {
+  background: #a14b3e;
+  border-color: #a14b3e;
+
+  transform: translateY(-2px);
+
+  box-shadow: 0 6px 15px rgba(161, 75, 62, 0.18);
+}
+
+.botao-salvar:disabled {
+  opacity: 0.6;
+
+  cursor: not-allowed;
+
+  transform: none;
+
+  box-shadow: none;
+}
+
+/* =========================================================
+   MENSAGEM DE ERRO
+========================================================= */
+
+.editar-erro {
+  margin: 0 0 24px;
+
+  padding: 15px 18px;
+
+  border: 1px solid #e2b8ae;
+  border-radius: 10px;
+
+  background: #f9e8e4;
+
+  color: #8e382c;
+
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* =========================================================
+   TELAS DE LOGIN / CARREGAMENTO / ERRO
+========================================================= */
+
+.editar-reserva-card > h1 {
+  margin: 0 0 12px;
+
+  color: #4a2c25;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 32px;
+  font-weight: 500;
+
+  text-align: center;
+}
+
+.editar-reserva-card > p {
+  margin: 0 0 25px;
+
+  color: #806960;
+
+  font-size: 15px;
+  line-height: 1.6;
+
+  text-align: center;
+}
+
+/* Botão das telas alternativas */
+
+.editar-reserva-card > .botao-voltar {
+  display: block;
+
+  margin: 0 auto;
+}
+
+/* =========================================================
+   RESPONSIVIDADE
+========================================================= */
+
+@media (max-width: 800px) {
+
+  .editar-reserva-container {
+    padding: 50px 20px 70px;
+  }
+
+  .editar-reserva-card {
+    padding: 38px 30px;
+  }
+
+  .editar-reserva-topo h1 {
+    font-size: 34px;
+  }
+
+}
+
+
+/* =========================================================
+   CELULAR
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .editar-reserva-container {
+    padding: 35px 15px 55px;
+  }
+
+  .editar-reserva-card {
+    padding: 30px 20px;
+
+    border-radius: 14px;
+  }
+
+  .editar-reserva-topo {
+    padding-bottom: 26px;
+    margin-bottom: 26px;
+  }
+
+  .editar-reserva-topo h1 {
+    font-size: 29px;
+  }
+
+  .editar-reserva-topo p {
+    font-size: 14px;
+  }
+
+  .campo {
+    margin-bottom: 19px;
+  }
+
+  .campo input {
+    min-height: 47px;
+  }
+
+  .editar-reserva-acoes {
+    flex-direction: column-reverse;
+    align-items: stretch;
+  }
+
+  .botao-voltar,
+  .botao-salvar {
+    width: 100%;
+  }
+
+}
+
+
+/* =========================================================
+   CELULARES PEQUENOS
+========================================================= */
+
+@media (max-width: 420px) {
+
+  .editar-reserva-card {
+    padding: 26px 17px;
+  }
+
+  .editar-reserva-topo h1 {
+    font-size: 27px;
+  }
+
+  .editar-etiqueta {
+    font-size: 11px;
+  }
+
+  .editar-reserva-card > h1 {
+    font-size: 28px;
+  }
+
+}
+

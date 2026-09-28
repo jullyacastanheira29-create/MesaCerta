@@ -1,0 +1,228 @@
+/* FUNDO DA PÁGINA */
+
+.novo-cliente {
+  min-height: 100vh;
+  width: 100%;
+  padding: 50px 20px;
+  box-sizing: border-box;
+
+  background: #f8f4ef;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+
+/* FORMULÁRIO */
+
+.novo-cliente .ficha--formulario {
+  width: 100%;
+  max-width: 500px;
+
+  margin: 20px auto;
+  padding: 35px;
+
+  box-sizing: border-box;
+
+  background: #fffaf5;
+
+  border: 1px solid #ddc8b4;
+  border-radius: 18px;
+
+  box-shadow: 0 8px 25px rgba(91, 61, 45, 0.15);
+}
+
+
+/* ABA "NOVO" */
+
+.novo-cliente .ficha__aba {
+  display: inline-block;
+
+  margin-bottom: 25px;
+  padding: 8px 20px;
+
+  background: #9b4d3d;
+  color: white;
+
+  border-radius: 20px;
+
+  font-size: 14px;
+  font-weight: bold;
+}
+
+
+/* ERRO */
+
+.novo-cliente .aviso--erro {
+  margin-bottom: 20px;
+  padding: 12px 15px;
+
+  background: #f6d9d4;
+
+  border: 1px solid #c9796a;
+  border-radius: 10px;
+
+  color: #7d3026;
+
+  font-size: 14px;
+}
+
+
+/* LABEL */
+
+.novo-cliente .campo {
+  display: flex;
+  flex-direction: column;
+
+  margin-bottom: 20px;
+}
+
+.novo-cliente .campo span {
+  margin-bottom: 8px;
+
+  color: #5c4033;
+
+  font-size: 15px;
+  font-weight: 600;
+}
+
+
+/* INPUT */
+
+.novo-cliente .campo input {
+  width: 100%;
+  padding: 14px 15px;
+
+  box-sizing: border-box;
+
+  background: #fdf8f2;
+
+  border: 1px solid #d5bda8;
+  border-radius: 10px;
+
+  color: #4d362b;
+
+  font-size: 15px;
+
+  outline: none;
+
+  transition: 0.25s;
+}
+
+
+/* PLACEHOLDER */
+
+.novo-cliente .campo input::placeholder {
+  color: #b69b87;
+}
+
+
+/* INPUT CLICADO */
+
+.novo-cliente .campo input:focus {
+  background: white;
+
+  border-color: #9b4d3d;
+
+  box-shadow: 0 0 0 3px rgba(155, 77, 61, 0.12);
+}
+
+
+/* BOTÕES */
+
+.novo-cliente .ficha__acoes {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  margin-top: 28px;
+}
+
+
+/* BOTÃO ADICIONAR */
+
+.novo-cliente .botao--primario {
+  flex: 1;
+
+  padding: 14px 18px;
+
+  background: #9b4d3d;
+  color: white;
+
+  border: none;
+  border-radius: 10px;
+
+  font-size: 14px;
+  font-weight: bold;
+
+  cursor: pointer;
+
+  transition: 0.25s;
+}
+
+.novo-cliente .botao--primario:hover {
+  background: #7f3d31;
+
+  transform: translateY(-2px);
+}
+
+
+/* BOTÃO CANCELAR */
+
+.novo-cliente .botao--texto {
+  padding: 14px 20px;
+
+  background: transparent;
+
+  color: #8b4a3a;
+
+  border: 1px solid #cba995;
+  border-radius: 10px;
+
+  font-size: 14px;
+  font-weight: bold;
+
+  cursor: pointer;
+
+  transition: 0.25s;
+}
+
+.novo-cliente .botao--texto:hover {
+  background: #ead9c8;
+}
+
+
+/* BOTÃO DESATIVADO */
+
+.novo-cliente .botao--primario:disabled {
+  background: #c8a99a;
+
+  cursor: not-allowed;
+
+  transform: none;
+}
+
+
+/* CELULAR */
+
+@media (max-width: 600px) {
+
+  .novo-cliente {
+    padding: 25px 12px;
+  }
+
+  .novo-cliente .ficha--formulario {
+    padding: 25px 20px;
+  }
+
+  .novo-cliente .ficha__acoes {
+    flex-direction: column;
+  }
+
+  .novo-cliente .botao--primario,
+  .novo-cliente .botao--texto {
+    width: 100%;
+  }
+}

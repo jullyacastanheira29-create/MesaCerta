@@ -1,0 +1,332 @@
+/* =========================================
+   EDITAR PERFIL - MESACERTA
+========================================= */
+
+.editar-perfil-container {
+  width: 100%;
+  min-height: 70vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+
+  padding: 55px 25px;
+
+  box-sizing: border-box;
+
+  background: #f8f3ee;
+}
+
+
+.editar-perfil-card {
+  width: 100%;
+  max-width: 720px;
+
+  background: #ffffff;
+
+  border: 1px solid #eaded6;
+
+  border-radius: 22px;
+
+  padding: 42px;
+
+  box-sizing: border-box;
+
+  box-shadow:
+    0 10px 35px rgba(87, 57, 45, 0.10);
+}
+
+
+/* =========================================
+   CABEÇALHO
+========================================= */
+
+.editar-perfil-cabecalho {
+  display: flex;
+  align-items: center;
+
+  gap: 20px;
+
+  padding-bottom: 28px;
+
+  margin-bottom: 28px;
+
+  border-bottom: 1px solid #eee2db;
+}
+
+
+.editar-perfil-icone {
+  width: 75px;
+  height: 75px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #f2e1d8;
+
+  border: 5px solid #faf3ee;
+
+  font-size: 30px;
+}
+
+
+.editar-perfil-tag {
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: #a34c3e;
+
+  font-size: 11px;
+
+  font-weight: 800;
+
+  letter-spacing: 2px;
+}
+
+
+.editar-perfil-cabecalho h1 {
+  margin: 0;
+
+  color: #50352d;
+
+  font-size: 30px;
+}
+
+
+.editar-perfil-cabecalho p {
+  margin: 7px 0 0;
+
+  color: #806f68;
+
+  font-size: 14px;
+}
+
+
+/* =========================================
+   MENSAGENS
+========================================= */
+
+.editar-perfil-sucesso,
+.editar-perfil-erro {
+  padding: 13px 16px;
+
+  margin-bottom: 22px;
+
+  border-radius: 10px;
+
+  font-size: 14px;
+
+  font-weight: 600;
+}
+
+
+.editar-perfil-sucesso {
+  background: #e8f3e9;
+
+  border: 1px solid #c8e1cb;
+
+  color: #397044;
+}
+
+
+.editar-perfil-erro {
+  background: #fae7e3;
+
+  border: 1px solid #edc5be;
+
+  color: #a33f34;
+}
+
+
+/* =========================================
+   FORMULÁRIO
+========================================= */
+
+.editar-perfil-form {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 21px;
+}
+
+
+.editar-perfil-campo {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 8px;
+}
+
+
+.editar-perfil-campo label {
+  color: #563b32;
+
+  font-size: 14px;
+
+  font-weight: 700;
+}
+
+
+.editar-perfil-campo input {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  padding: 14px 16px;
+
+  border: 1px solid #ddcec5;
+
+  border-radius: 11px;
+
+  outline: none;
+
+  background: #fffdfb;
+
+  color: #4f342c;
+
+  font-family: inherit;
+
+  font-size: 15px;
+}
+
+
+.editar-perfil-campo input:focus {
+  background: #ffffff;
+
+  border-color: #a34c3e;
+
+  box-shadow:
+    0 0 0 3px rgba(163, 76, 62, 0.10);
+}
+
+
+.editar-perfil-campo small {
+  color: #95837b;
+
+  font-size: 12px;
+}
+
+
+/* =========================================
+   BOTÕES
+========================================= */
+
+.editar-perfil-acoes {
+  display: flex;
+
+  justify-content: flex-end;
+
+  gap: 12px;
+
+  margin-top: 10px;
+}
+
+
+.editar-perfil-voltar,
+.editar-perfil-salvar {
+  padding: 13px 22px;
+
+  border-radius: 10px;
+
+  font-family: inherit;
+
+  font-size: 14px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+
+.editar-perfil-voltar {
+  border: 1px solid #d8c6bd;
+
+  background: #ffffff;
+
+  color: #704b40;
+}
+
+
+.editar-perfil-voltar:hover {
+  background: #f7efeb;
+}
+
+
+.editar-perfil-salvar {
+  border: none;
+
+  background: #9b4639;
+
+  color: #ffffff;
+
+  min-width: 175px;
+}
+
+
+.editar-perfil-salvar:hover {
+  background: #82372e;
+}
+
+
+.editar-perfil-salvar:disabled {
+  opacity: 0.6;
+
+  cursor: not-allowed;
+}
+
+
+/* =========================================
+   RESPONSIVIDADE
+========================================= */
+
+@media (max-width: 700px) {
+
+  .editar-perfil-container {
+    padding: 35px 15px;
+  }
+
+
+  .editar-perfil-card {
+    padding: 28px 22px;
+
+    border-radius: 18px;
+  }
+
+
+  .editar-perfil-cabecalho {
+    gap: 15px;
+  }
+
+
+  .editar-perfil-icone {
+    width: 62px;
+    height: 62px;
+
+    font-size: 25px;
+  }
+
+
+  .editar-perfil-cabecalho h1 {
+    font-size: 25px;
+  }
+
+
+  .editar-perfil-acoes {
+    flex-direction: column-reverse;
+  }
+
+
+  .editar-perfil-voltar,
+  .editar-perfil-salvar {
+    width: 100%;
+  }
+
+}

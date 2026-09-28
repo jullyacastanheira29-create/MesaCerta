@@ -1,0 +1,101 @@
+/* =================================
+   PÁGINA EDITAR CLIENTE
+   ================================= */
+
+.catalogo__pagina--formulario {
+  min-height: 100vh;
+  width: 100%;
+  box-sizing: border-box;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+
+  padding: 50px 20px;
+
+  background: #f3e7d8;
+}
+
+/* =================================
+   MENSAGEM DE CARREGAMENTO
+   ================================= */
+
+.catalogo__estado {
+  min-height: 100vh;
+  margin: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: #f3e7d8;
+
+  color: #6b4a3a;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+
+/* =================================
+   MENSAGEM DE ERRO
+   ================================= */
+
+.catalogo__pagina > .aviso--erro {
+  width: 100%;
+  max-width: 500px;
+
+  margin: 80px auto;
+  padding: 20px;
+
+  box-sizing: border-box;
+
+  background: #f8ded9;
+
+  border: 1px solid #c9796a;
+  border-radius: 12px;
+
+  color: #7d3026;
+
+  font-size: 15px;
+  text-align: center;
+
+  box-shadow: 0 5px 15px rgba(91, 61, 45, 0.08);
+}
+
+
+/* =================================
+   LINK "VOLTAR PARA A LISTA"
+   ================================= */
+
+.catalogo__pagina .aviso--erro a {
+  display: inline-block;
+
+  margin-left: 5px;
+
+  color: #8f4638;
+  font-weight: 600;
+
+  text-decoration: none;
+
+  transition: 0.2s ease;
+}
+
+.catalogo__pagina .aviso--erro a:hover {
+  color: #6f3027;
+  text-decoration: underline;
+}
+
+
+/* =================================
+   RESPONSIVIDADE
+   ================================= */
+
+@media (max-width: 600px) {
+  .catalogo__pagina--formulario {
+    padding: 25px 10px;
+  }
+
+  .catalogo__pagina > .aviso--erro {
+    margin: 40px auto;
+  }
+}

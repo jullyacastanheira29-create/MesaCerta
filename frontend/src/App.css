@@ -1,0 +1,478 @@
+/* =====================================================
+   RESET
+===================================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f8f3ed;
+  color: #3e2b23;
+}
+
+
+/* =====================================================
+   ESTRUTURA PRINCIPAL
+===================================================== */
+
+.mesa-certa {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #f8f3ed;
+}
+
+.mesa-certa__conteudo {
+  flex: 1;
+  width: 100%;
+}
+
+
+/* =====================================================
+   NAVBAR
+===================================================== */
+
+.mesa-certa__header {
+  width: 100%;
+  min-height: 82px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 12px 55px;
+
+  background-color: #fffaf5;
+
+  border-bottom: 1px solid #eadbd0;
+
+  box-shadow: 0 2px 10px rgba(80, 48, 35, 0.08);
+
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+
+/* =====================================================
+   LOGO
+===================================================== */
+
+.mesa-certa__logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  min-width: 260px;
+}
+
+.mesa-certa__logo-imagem {
+  width: 55px;
+  height: 55px;
+
+  object-fit: contain;
+
+  display: block;
+}
+
+.mesa-certa__logo-texto {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.mesa-certa__logo h1 {
+  font-size: 25px;
+  font-weight: 700;
+
+  color: #6b2f24;
+
+  line-height: 1.1;
+
+  letter-spacing: -0.5px;
+}
+
+.mesa-certa__logo span {
+  margin-top: 4px;
+
+  font-size: 11px;
+
+  color: #8c756a;
+
+  white-space: nowrap;
+}
+
+
+/* =====================================================
+   MENU
+===================================================== */
+
+.mesa-certa__nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 38px;
+
+  flex: 1;
+}
+
+.mesa-certa__link {
+  position: relative;
+
+  padding: 8px 2px;
+
+  text-decoration: none;
+
+  color: #5d463c;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  transition:
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.mesa-certa__link:hover {
+  color: #a64032;
+
+  transform: translateY(-1px);
+}
+
+.mesa-certa__link--ativo {
+  color: #a64032;
+}
+
+
+/* LINHA DO LINK ATIVO */
+
+.mesa-certa__link--ativo::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  height: 2px;
+
+  background-color: #a64032;
+
+  border-radius: 10px;
+}
+
+
+/* =====================================================
+   ÁREA DO PERFIL
+===================================================== */
+
+.mesa-certa__perfil {
+  min-width: 260px;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  gap: 15px;
+}
+
+
+/* LINK DO PERFIL */
+
+.mesa-certa__perfil-link {
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  padding: 8px 12px;
+
+  text-decoration: none;
+
+  color: #4b372f;
+
+  border-radius: 10px;
+
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease;
+}
+
+.mesa-certa__perfil-link:hover {
+  background-color: #f2e5dc;
+
+  color: #a64032;
+}
+
+
+/* ÍCONE */
+
+.mesa-certa__perfil-icone {
+  width: 36px;
+  height: 36px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: #ead5c7;
+
+  border-radius: 50%;
+
+  font-size: 18px;
+}
+
+.mesa-certa__perfil-nome {
+  max-width: 120px;
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+
+  white-space: nowrap;
+
+  font-size: 14px;
+  font-weight: 600;
+}
+
+
+/* =====================================================
+   BOTÃO SAIR
+===================================================== */
+
+.mesa-certa__sair {
+  padding: 9px 16px;
+
+  border: 1px solid #a64032;
+
+  border-radius: 8px;
+
+  background-color: transparent;
+
+  color: #a64032;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease,
+    transform 0.2s ease;
+}
+
+.mesa-certa__sair:hover {
+  background-color: #a64032;
+
+  color: #ffffff;
+
+  transform: translateY(-1px);
+}
+
+
+/* =====================================================
+   LINK ENTRAR
+===================================================== */
+
+.mesa-certa__login-link {
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  padding: 8px 14px;
+
+  text-decoration: none;
+
+  color: #6b2f24;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  border-radius: 10px;
+
+  transition: background-color 0.25s ease;
+}
+
+.mesa-certa__login-link:hover {
+  background-color: #f2e5dc;
+}
+
+
+/* =====================================================
+   RODAPÉ
+===================================================== */
+
+.mesa-certa__footer {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 30px 55px;
+
+  background-color: #4b3028;
+
+  color: #ffffff;
+
+  margin-top: 40px;
+}
+
+.mesa-certa__footer strong {
+  display: block;
+
+  font-size: 20px;
+
+  color: #ffffff;
+
+  margin-bottom: 5px;
+}
+
+.mesa-certa__footer p {
+  font-size: 13px;
+
+  color: #eadbd2;
+
+  line-height: 1.5;
+}
+
+.mesa-certa__footer > span {
+  font-size: 12px;
+
+  color: #d9c5bb;
+}
+
+
+/* =====================================================
+   LINKS GERAIS
+===================================================== */
+
+a {
+  color: inherit;
+}
+
+
+/* =====================================================
+   RESPONSIVIDADE
+===================================================== */
+
+@media (max-width: 1000px) {
+
+  .mesa-certa__header {
+    padding: 12px 30px;
+  }
+
+  .mesa-certa__logo {
+    min-width: auto;
+  }
+
+  .mesa-certa__logo span {
+    display: none;
+  }
+
+  .mesa-certa__nav {
+    gap: 20px;
+  }
+
+  .mesa-certa__perfil {
+    min-width: auto;
+  }
+
+  .mesa-certa__perfil-nome {
+    display: none;
+  }
+
+}
+
+
+@media (max-width: 750px) {
+
+  .mesa-certa__header {
+    min-height: auto;
+
+    flex-wrap: wrap;
+
+    gap: 15px;
+
+    padding: 15px 20px;
+  }
+
+  .mesa-certa__logo {
+    flex: 1;
+  }
+
+  .mesa-certa__logo-imagem {
+    width: 48px;
+    height: 48px;
+  }
+
+  .mesa-certa__logo h1 {
+    font-size: 21px;
+  }
+
+  .mesa-certa__nav {
+    order: 3;
+
+    width: 100%;
+
+    justify-content: center;
+
+    gap: 25px;
+  }
+
+  .mesa-certa__link {
+    font-size: 13px;
+  }
+
+  .mesa-certa__perfil {
+    min-width: auto;
+  }
+
+  .mesa-certa__sair {
+    padding: 7px 11px;
+  }
+
+  .mesa-certa__footer {
+    flex-direction: column;
+
+    gap: 15px;
+
+    text-align: center;
+
+    padding: 25px 20px;
+  }
+
+}
+
+
+@media (max-width: 480px) {
+
+  .mesa-certa__nav {
+    gap: 15px;
+  }
+
+  .mesa-certa__link {
+    font-size: 12px;
+  }
+
+  .mesa-certa__perfil-icone {
+    width: 32px;
+    height: 32px;
+
+    font-size: 16px;
+  }
+
+}
+

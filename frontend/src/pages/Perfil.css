@@ -1,0 +1,414 @@
+/* =========================================================
+   PERFIL - MESACERTA
+   Padrão visual: claro, sofisticado e moderno
+========================================================= */
+
+.perfil-container {
+  min-height: calc(100vh - 80px);
+  width: 100%;
+  background: #fffaf6;
+  color: #422c25;
+  padding: 70px 30px 90px;
+  box-sizing: border-box;
+}
+
+/* =========================================================
+   CARD PRINCIPAL
+========================================================= */
+
+.perfil-card {
+  width: 100%;
+  max-width: 950px;
+  margin: 0 auto;
+  background: #fffdfb;
+  border: 1px solid #eadbd2;
+  border-radius: 18px;
+  padding: 50px;
+  box-sizing: border-box;
+  box-shadow: 0 10px 35px rgba(66, 44, 37, 0.07);
+}
+
+/* =========================================================
+   CABEÇALHO
+========================================================= */
+
+.perfil-cabecalho {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding-bottom: 35px;
+  border-bottom: 1px solid #eadbd2;
+}
+
+.perfil-icone {
+  width: 72px;
+  height: 72px;
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #f3e8df;
+  border: 1px solid #e5cfc3;
+  border-radius: 50%;
+
+  font-size: 30px;
+}
+
+.perfil-tag {
+  display: inline-block;
+  margin-bottom: 8px;
+
+  color: #a14b3e;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.perfil-cabecalho h1 {
+  margin: 0;
+
+  color: #4a2c25;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 1.15;
+}
+
+.perfil-cabecalho p {
+  margin: 10px 0 0;
+
+  color: #806960;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* =========================================================
+   MENSAGEM DE ERRO
+========================================================= */
+
+.perfil-erro {
+  margin-top: 28px;
+  padding: 15px 18px;
+
+  background: #f9e8e4;
+  border: 1px solid #e2b8ae;
+  border-radius: 10px;
+
+  color: #8e382c;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* =========================================================
+   INFORMAÇÕES
+========================================================= */
+
+.perfil-informacoes {
+  margin-top: 35px;
+}
+
+.perfil-informacao {
+  display: flex;
+  flex-direction: column;
+
+  padding: 20px 0;
+
+  border-bottom: 1px solid #eee1d9;
+}
+
+.perfil-informacao:first-child {
+  padding-top: 0;
+}
+
+.perfil-informacao:last-child {
+  border-bottom: none;
+}
+
+.perfil-informacao-label {
+  margin-bottom: 7px;
+
+  color: #9a8177;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+}
+
+.perfil-informacao strong {
+  color: #4a2c25;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 19px;
+  font-weight: 500;
+  word-break: break-word;
+}
+
+.perfil-informacao small {
+  margin-top: 6px;
+
+  color: #9a8177;
+  font-size: 12px;
+}
+
+.perfil-senha {
+  letter-spacing: 4px;
+  font-family: Arial, sans-serif !important;
+  font-size: 18px !important;
+}
+
+/* =========================================================
+   BOTÕES
+========================================================= */
+
+.perfil-acoes {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 12px;
+
+  margin-top: 32px;
+}
+
+.perfil-botao,
+.perfil-botao-secundario,
+.perfil-botao-excluir {
+  min-height: 45px;
+  padding: 0 22px;
+
+  border-radius: 8px;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+/* Botão principal */
+
+.perfil-botao {
+  border: 1px solid #4a2c25;
+  background: #4a2c25;
+  color: #fffaf6;
+}
+
+.perfil-botao:hover {
+  background: #a14b3e;
+  border-color: #a14b3e;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(161, 75, 62, 0.18);
+}
+
+/* Botão voltar */
+
+.perfil-botao-secundario {
+  border: 1px solid #d9c6bb;
+  background: #f8eee8;
+  color: #5a3b32;
+}
+
+.perfil-botao-secundario:hover {
+  background: #f1e1d8;
+  border-color: #cdb5a9;
+  transform: translateY(-2px);
+}
+
+/* =========================================================
+   ÁREA DE EXCLUSÃO
+========================================================= */
+
+.perfil-excluir {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+
+  margin-top: 45px;
+  padding-top: 30px;
+
+  border-top: 1px solid #eadbd2;
+}
+
+.perfil-excluir h3 {
+  margin: 0 0 7px;
+
+  color: #6d4439;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.perfil-excluir p {
+  max-width: 500px;
+  margin: 0;
+
+  color: #907b72;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+/* =========================================================
+   BOTÃO EXCLUIR
+========================================================= */
+
+.perfil-botao-excluir {
+  flex-shrink: 0;
+
+  border: 1px solid #d9aaa0;
+  background: transparent;
+  color: #a14b3e;
+}
+
+.perfil-botao-excluir:hover {
+  background: #f9e8e4;
+  border-color: #c9897d;
+  transform: translateY(-2px);
+}
+
+.perfil-botao-excluir:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* =========================================================
+   ESTADO DE CARREGAMENTO
+========================================================= */
+
+.perfil-container .perfil-card > h2 {
+  margin: 20px 0;
+
+  color: #4a2c25;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 24px;
+  font-weight: 500;
+  text-align: center;
+}
+
+/* =========================================================
+   RESPONSIVIDADE
+========================================================= */
+
+@media (max-width: 800px) {
+
+  .perfil-container {
+    padding: 50px 20px 70px;
+  }
+
+  .perfil-card {
+    padding: 35px 30px;
+  }
+
+  .perfil-cabecalho h1 {
+    font-size: 34px;
+  }
+
+  .perfil-excluir {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .perfil-botao-excluir {
+    width: 100%;
+  }
+
+}
+
+
+/* =========================================================
+   TABLET / CELULAR
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .perfil-container {
+    padding: 35px 15px 55px;
+  }
+
+  .perfil-card {
+    padding: 28px 20px;
+    border-radius: 14px;
+  }
+
+  .perfil-cabecalho {
+    align-items: flex-start;
+    gap: 16px;
+    padding-bottom: 28px;
+  }
+
+  .perfil-icone {
+    width: 58px;
+    height: 58px;
+    font-size: 24px;
+  }
+
+  .perfil-cabecalho h1 {
+    font-size: 29px;
+  }
+
+  .perfil-cabecalho p {
+    font-size: 14px;
+  }
+
+  .perfil-informacao strong {
+    font-size: 17px;
+  }
+
+  .perfil-acoes {
+    flex-direction: column-reverse;
+    align-items: stretch;
+  }
+
+  .perfil-botao,
+  .perfil-botao-secundario {
+    width: 100%;
+  }
+
+}
+
+
+/* =========================================================
+   CELULARES PEQUENOS
+========================================================= */
+
+@media (max-width: 420px) {
+
+  .perfil-cabecalho {
+    flex-direction: column;
+  }
+
+  .perfil-cabecalho h1 {
+    font-size: 27px;
+  }
+
+  .perfil-tag {
+    font-size: 11px;
+  }
+
+  .perfil-informacao {
+    padding: 17px 0;
+  }
+
+}
+/* =========================================================
+   IMAGEM DO PERFIL
+========================================================= */
+
+.perfil-icone {
+  overflow: hidden;
+}
+
+.perfil-imagem {
+  width: 110px;
+  height: 85px;
+  object-fit: contain;
+  display: block;
+}

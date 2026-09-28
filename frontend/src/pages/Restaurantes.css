@@ -1,0 +1,823 @@
+/* ========================================
+   RESTAURANTES - MESACERTA
+   Visual moderno e sofisticado
+======================================== */
+
+.restaurantes-container {
+  width: 100%;
+  min-height: 100vh;
+
+  padding: 75px 70px 100px;
+
+  background: #fffaf6;
+
+  color: #422c25;
+
+  font-family:
+    "Segoe UI",
+    Arial,
+    sans-serif;
+}
+
+
+/* ========================================
+   CABEÇALHO
+======================================== */
+
+.restaurantes-header {
+  max-width: 1000px;
+
+  margin: 0 auto;
+
+  text-align: center;
+}
+
+.restaurantes-tag {
+  display: inline-block;
+
+  margin-bottom: 18px;
+
+  color: #a14b3e;
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  letter-spacing: 3px;
+}
+
+.restaurantes-header h1 {
+  max-width: 780px;
+
+  margin: 0 auto;
+
+  color: #4b3028;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: clamp(42px, 5vw, 62px);
+
+  font-weight: 500;
+
+  line-height: 1.08;
+
+  letter-spacing: -2px;
+}
+
+.restaurantes-header h1 strong {
+  color: #a64c3e;
+
+  font-weight: 500;
+}
+
+.restaurantes-header > p {
+  max-width: 590px;
+
+  margin: 20px auto 35px;
+
+  color: #92786d;
+
+  font-size: 14px;
+
+  line-height: 1.8;
+}
+
+
+/* ========================================
+   BUSCA
+======================================== */
+
+.restaurantes-busca {
+  width: 100%;
+  max-width: 650px;
+
+  height: 56px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  margin: 0 auto;
+
+  padding: 0 17px;
+
+  border: 1px solid #dfcdc4;
+
+  border-radius: 9px;
+
+  background: #fffdfb;
+
+  box-shadow:
+    0 8px 25px rgba(78, 45, 36, 0.05);
+
+  transition: 0.25s ease;
+}
+
+.restaurantes-busca:focus-within {
+  border-color: #b98778;
+
+  box-shadow:
+    0 0 0 3px rgba(166, 76, 62, 0.08),
+    0 8px 25px rgba(78, 45, 36, 0.05);
+}
+
+.restaurantes-busca > span {
+  flex-shrink: 0;
+
+  color: #a64c3e;
+
+  font-size: 17px;
+}
+
+.restaurantes-busca input {
+  width: 100%;
+
+  height: 100%;
+
+  border: none;
+
+  outline: none;
+
+  background: transparent;
+
+  color: #51352c;
+
+  font-family: inherit;
+
+  font-size: 13px;
+}
+
+.restaurantes-busca input::placeholder {
+  color: #ad9890;
+}
+
+.restaurantes-busca__limpar {
+  width: 27px;
+  height: 27px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border: none;
+
+  border-radius: 50%;
+
+  background: #f3e8df;
+
+  color: #8d5a4d;
+
+  font-size: 18px;
+
+  line-height: 1;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.restaurantes-busca__limpar:hover {
+  background: #ead5ca;
+
+  color: #6d382d;
+}
+
+
+/* ========================================
+   RESULTADOS
+======================================== */
+
+.restaurantes-resultados {
+  max-width: 1250px;
+
+  margin: 85px auto 0;
+}
+
+.restaurantes-titulo {
+  display: flex;
+
+  align-items: flex-end;
+
+  justify-content: space-between;
+
+  gap: 30px;
+
+  margin-bottom: 30px;
+
+  padding-bottom: 18px;
+
+  border-bottom: 1px solid #eadbd2;
+}
+
+.restaurantes-titulo__tag {
+  display: block;
+
+  margin-bottom: 10px;
+
+  color: #a14b3e;
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  letter-spacing: 2px;
+}
+
+.restaurantes-titulo h2 {
+  margin: 0;
+
+  color: #4b3028;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 32px;
+
+  font-weight: 500;
+
+  line-height: 1.15;
+}
+
+.restaurantes-titulo__quantidade {
+  padding-bottom: 4px;
+
+  color: #987e72;
+
+  font-size: 12px;
+}
+
+
+/* ========================================
+   GRID
+======================================== */
+
+.restaurantes-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 20px;
+}
+
+
+/* ========================================
+   CARD
+======================================== */
+
+.restaurante-card {
+  overflow: hidden;
+
+  border: 1px solid #eadbd2;
+
+  border-radius: 14px;
+
+  background: #fffdfb;
+
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.restaurante-card:hover {
+  border-color: #cda99b;
+
+  transform: translateY(-5px);
+
+  box-shadow:
+    0 18px 35px rgba(78, 45, 36, 0.09);
+}
+
+
+/* ========================================
+   IMAGEM
+======================================== */
+
+.restaurante-card__imagem {
+  position: relative;
+
+  width: 100%;
+
+  height: 225px;
+
+  overflow: hidden;
+
+  background: #eadbd2;
+}
+
+.restaurante-card__imagem img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  transition: transform 0.45s ease;
+}
+
+.restaurante-card:hover
+.restaurante-card__imagem img {
+  transform: scale(1.04);
+}
+
+.restaurante-card__imagem-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      to top,
+      rgba(52, 31, 25, 0.18),
+      transparent 45%
+    );
+
+  pointer-events: none;
+}
+
+
+/* ========================================
+   CONTEÚDO DO CARD
+======================================== */
+
+.restaurante-card__conteudo {
+  padding: 25px 25px 23px;
+}
+
+.restaurante-card__conteudo h3 {
+  margin: 0;
+
+  color: #4b3028;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 23px;
+
+  font-weight: 500;
+
+  line-height: 1.2;
+}
+
+.restaurante-card__cozinha {
+  display: inline-block;
+
+  margin-top: 9px;
+
+  padding: 5px 9px;
+
+  border-radius: 5px;
+
+  background: #f3e8df;
+
+  color: #9a493c;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.4px;
+}
+
+
+/* ========================================
+   INFORMAÇÕES
+======================================== */
+
+.restaurante-card__informacao {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 9px;
+
+  margin: 14px 0 0;
+
+  color: #92786d;
+
+  font-size: 12px;
+
+  line-height: 1.55;
+}
+
+.restaurante-card__informacao-icone {
+  flex-shrink: 0;
+
+  color: #a64c3e;
+
+  font-size: 13px;
+}
+
+
+/* ========================================
+   BOTÃO
+======================================== */
+
+.restaurante-card__botao {
+  width: 100%;
+
+  min-height: 47px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  margin-top: 23px;
+
+  padding: 12px 15px;
+
+  border: none;
+
+  border-radius: 7px;
+
+  background: #4a2c25;
+
+  color: #fff9f4;
+
+  font-family: inherit;
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.25s ease;
+}
+
+.restaurante-card__botao:hover {
+  background: #a64c3e;
+
+  transform: translateY(-1px);
+}
+
+.restaurante-card__botao-seta {
+  color: #d97865;
+
+  font-size: 18px;
+
+  transition: transform 0.2s ease;
+}
+
+.restaurante-card__botao:hover
+.restaurante-card__botao-seta {
+  color: #fff9f4;
+
+  transform: translateX(3px);
+}
+
+
+/* ========================================
+   ESTADO VAZIO
+======================================== */
+
+.restaurantes-vazio {
+  max-width: 620px;
+
+  margin: 55px auto 0;
+
+  padding: 55px 35px;
+
+  border: 1px solid #eadbd2;
+
+  border-radius: 14px;
+
+  background: #fffdfb;
+
+  text-align: center;
+
+  box-shadow:
+    0 12px 30px rgba(78, 45, 36, 0.04);
+}
+
+.restaurantes-vazio > span {
+  width: 55px;
+  height: 55px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  margin: 0 auto 20px;
+
+  border: 1px solid #d9bbae;
+
+  border-radius: 50%;
+
+  background: #f8e9de;
+
+  font-size: 20px;
+}
+
+.restaurantes-vazio h2 {
+  margin: 0;
+
+  color: #4b3028;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 27px;
+
+  font-weight: 500;
+}
+
+.restaurantes-vazio p {
+  margin: 12px auto 24px;
+
+  color: #92786d;
+
+  font-size: 13px;
+
+  line-height: 1.7;
+}
+
+.restaurantes-vazio button {
+  min-height: 43px;
+
+  padding: 11px 18px;
+
+  border: none;
+
+  border-radius: 7px;
+
+  background: #4a2c25;
+
+  color: #fff9f4;
+
+  font-family: inherit;
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.25s ease;
+}
+
+.restaurantes-vazio button:hover {
+  background: #a64c3e;
+
+  transform: translateY(-2px);
+}
+
+
+/* ========================================
+   CARREGANDO
+======================================== */
+
+.restaurantes-carregando {
+  min-height: 65vh;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 18px;
+}
+
+.restaurantes-spinner {
+  width: 38px;
+  height: 38px;
+
+  border: 3px solid #eadbd2;
+
+  border-top-color: #a64c3e;
+
+  border-radius: 50%;
+
+  animation: restaurantesGirar 0.8s linear infinite;
+}
+
+@keyframes restaurantesGirar {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.restaurantes-carregando p {
+  margin: 0;
+
+  color: #92786d;
+
+  font-size: 13px;
+}
+
+
+/* ========================================
+   ERRO
+======================================== */
+
+.restaurantes-erro {
+  max-width: 620px;
+
+  margin: 100px auto;
+
+  padding: 55px 35px;
+
+  border: 1px solid #eadbd2;
+
+  border-radius: 14px;
+
+  background: #fffdfb;
+
+  text-align: center;
+
+  box-shadow:
+    0 12px 30px rgba(78, 45, 36, 0.04);
+}
+
+.restaurantes-erro__icone {
+  width: 55px;
+  height: 55px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  margin: 0 auto 20px;
+
+  border-radius: 50%;
+
+  background: #f8e9de;
+
+  border: 1px solid #d9bbae;
+
+  color: #a14b3e;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 22px;
+}
+
+.restaurantes-erro h2 {
+  margin: 0;
+
+  color: #4b3028;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 27px;
+
+  font-weight: 500;
+}
+
+.restaurantes-erro p {
+  margin: 12px auto 24px;
+
+  color: #92786d;
+
+  font-size: 13px;
+
+  line-height: 1.7;
+}
+
+.restaurantes-erro button {
+  min-height: 43px;
+
+  padding: 11px 18px;
+
+  border: none;
+
+  border-radius: 7px;
+
+  background: #4a2c25;
+
+  color: #fff9f4;
+
+  font-family: inherit;
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.25s ease;
+}
+
+.restaurantes-erro button:hover {
+  background: #a64c3e;
+
+  transform: translateY(-2px);
+}
+
+
+/* ========================================
+   RESPONSIVIDADE
+======================================== */
+
+@media (max-width: 1050px) {
+
+  .restaurantes-container {
+    padding: 65px 45px 85px;
+  }
+
+  .restaurantes-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+@media (max-width: 700px) {
+
+  .restaurantes-container {
+    padding: 50px 25px 70px;
+  }
+
+  .restaurantes-header h1 {
+    font-size: 42px;
+
+    letter-spacing: -1.2px;
+  }
+
+  .restaurantes-header > p {
+    font-size: 13px;
+  }
+
+  .restaurantes-busca {
+    height: 53px;
+  }
+
+  .restaurantes-resultados {
+    margin-top: 65px;
+  }
+
+  .restaurantes-titulo {
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    gap: 10px;
+  }
+
+  .restaurantes-titulo h2 {
+    font-size: 28px;
+  }
+
+  .restaurantes-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .restaurante-card__imagem {
+    height: 220px;
+  }
+}
+
+
+@media (max-width: 450px) {
+
+  .restaurantes-container {
+    padding: 40px 18px 60px;
+  }
+
+  .restaurantes-header h1 {
+    font-size: 36px;
+  }
+
+  .restaurantes-tag {
+    letter-spacing: 2px;
+  }
+
+  .restaurante-card__conteudo {
+    padding: 22px 20px 20px;
+  }
+
+  .restaurante-card__imagem {
+    height: 205px;
+  }
+}
+

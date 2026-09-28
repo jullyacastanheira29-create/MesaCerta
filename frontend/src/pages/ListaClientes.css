@@ -1,0 +1,265 @@
+/* FUNDO DA PÁGINA */
+.catalogo__pagina {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px;
+  box-sizing: border-box;
+}
+
+/* CABEÇALHO */
+.catalogo__topo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.catalogo__topo h2 {
+  margin: 0;
+  color: #4b3025;
+  font-size: 28px;
+  font-weight: 600;
+}
+
+/* BOTÃO NOVO */
+.catalogo__topo .botao--primario {
+  display: inline-block;
+  padding: 12px 20px;
+  background: #8b5e4a;
+  color: #ffffff;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  border: none;
+}
+
+.catalogo__topo .botao--primario:hover {
+  background: #704837;
+}
+
+/* CAIXA DO FICHÁRIO */
+.catalogo__gaveta {
+  width: 100%;
+  box-sizing: border-box;
+
+  background: #f3e6dc;
+
+  border: 2px solid #d5b9a8;
+  border-radius: 15px;
+
+  padding: 25px;
+
+  box-shadow: 0 5px 20px rgba(70, 40, 25, 0.12);
+}
+
+/* LISTA */
+.catalogo__lista {
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* CADA FICHA */
+.catalogo__lista .ficha {
+  width: 100%;
+  min-height: 80px;
+
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: center;
+
+  gap: 18px;
+
+  padding: 15px 18px;
+
+  background: #fffaf7;
+
+  border: 1px solid #dfcabe;
+  border-radius: 10px;
+
+  box-shadow: 0 3px 8px rgba(70, 40, 25, 0.08);
+
+  list-style: none;
+}
+
+/* EFEITO AO PASSAR O MOUSE */
+.catalogo__lista .ficha:hover {
+  border-color: #b88d78;
+  box-shadow: 0 5px 14px rgba(70, 40, 25, 0.15);
+}
+
+/* CÍRCULO COM A INICIAL */
+.catalogo__lista .ficha__inicial {
+  width: 50px;
+  height: 50px;
+
+  min-width: 50px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #b98268;
+  color: white;
+
+  border-radius: 50%;
+
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* INFORMAÇÕES */
+.catalogo__lista .ficha__dados {
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 4px;
+
+  min-width: 0;
+}
+
+.catalogo__lista .ficha__dados strong {
+  color: #4b3025;
+  font-size: 17px;
+}
+
+.catalogo__lista .ficha__dados span {
+  color: #806b60;
+  font-size: 14px;
+}
+
+.catalogo__lista .ficha__dados .ficha__id {
+  color: #a58b7c;
+  font-size: 12px;
+}
+
+/* ÁREA DOS BOTÕES */
+.catalogo__lista .ficha__botoes {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  flex-shrink: 0;
+}
+
+/* TODOS OS BOTÕES PEQUENOS */
+.catalogo__lista .botao--pequeno {
+  padding: 8px 13px;
+
+  border-radius: 6px;
+
+  border: none;
+
+  font-size: 13px;
+  font-weight: bold;
+
+  cursor: pointer;
+
+  text-decoration: none;
+
+  background: #e2cfc2;
+  color: #5c4033;
+}
+
+/* EDITAR */
+.catalogo__lista .botao--pequeno:not(.botao--perigo):hover {
+  background: #cdb0a0;
+}
+
+/* EXCLUIR */
+.catalogo__lista .botao--perigo {
+  background: #a94b45;
+  color: white;
+}
+
+.catalogo__lista .botao--perigo:hover {
+  background: #873833;
+}
+
+/* CONFIRMAÇÃO */
+.catalogo__lista .ficha__confirmar {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+
+  color: #704837;
+
+  font-size: 13px;
+  font-weight: bold;
+}
+
+/* MENSAGEM DE ERRO */
+.catalogo__pagina .aviso--erro {
+  margin-bottom: 20px;
+  padding: 13px 16px;
+
+  background: #f5dddd;
+
+  border: 1px solid #dfb5b0;
+  border-radius: 8px;
+
+  color: #8c3934;
+
+  font-size: 14px;
+}
+
+/* MENSAGEM DE CARREGAMENTO / VAZIO */
+.catalogo__estado {
+  margin: 0;
+  padding: 45px 20px;
+
+  text-align: center;
+
+  color: #806b60;
+  font-size: 15px;
+}
+
+.catalogo__estado a {
+  color: #a94b45;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* CELULAR */
+@media (max-width: 700px) {
+
+  .catalogo__pagina {
+    padding: 20px 15px;
+  }
+
+  .catalogo__topo {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 15px;
+  }
+
+  .catalogo__topo h2 {
+    font-size: 23px;
+  }
+
+  .catalogo__gaveta {
+    padding: 15px;
+  }
+
+  .catalogo__lista .ficha {
+    flex-wrap: wrap;
+  }
+
+  .catalogo__lista .ficha__dados {
+    flex: 1;
+    min-width: 150px;
+  }
+
+  .catalogo__lista .ficha__botoes {
+    width: 100%;
+    justify-content: flex-end;
+  }
+}

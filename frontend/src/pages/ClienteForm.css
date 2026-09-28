@@ -1,0 +1,193 @@
+/* ============================= */
+/* CONTAINER DO FORMULÁRIO */
+/* ============================= */
+
+.formulario-container {
+  width: 100%;
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+
+/* ============================= */
+/* TÍTULO */
+/* ============================= */
+
+.titulo-cadastro {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.titulo-cadastro h1 {
+  margin: 0 0 10px;
+  color: #6b2f1f;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.titulo-cadastro p {
+  margin: 0;
+  color: #777;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+
+/* ============================= */
+/* FORMULÁRIO */
+/* ============================= */
+
+.ficha {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 32px;
+  border: 1px solid #eaded7;
+  box-shadow: 0 8px 25px rgba(80, 45, 30, 0.08);
+}
+
+.ficha--formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+
+/* ============================= */
+/* MENSAGEM DE ERRO */
+/* ============================= */
+
+.aviso {
+  padding: 12px 15px;
+  border-radius: 10px;
+  font-size: 14px;
+}
+
+.aviso--erro {
+  background: #fdeaea;
+  color: #a52a2a;
+  border: 1px solid #f2caca;
+}
+
+
+/* ============================= */
+/* CAMPOS */
+/* ============================= */
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.campo span {
+  color: #4d3025;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.campo input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 13px 15px;
+
+  border: 1px solid #d9c8bf;
+  border-radius: 10px;
+
+  background: #fffdfc;
+  color: #3f302a;
+
+  font-size: 15px;
+
+  outline: none;
+
+  transition: 0.2s ease;
+}
+
+.campo input::placeholder {
+  color: #aaa;
+}
+
+.campo input:focus {
+  border-color: #9b4a35;
+  box-shadow: 0 0 0 3px rgba(155, 74, 53, 0.1);
+}
+
+
+/* ============================= */
+/* BOTÕES */
+/* ============================= */
+
+.ficha__acoes {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.botao {
+  width: 100%;
+  padding: 13px 18px;
+
+  border-radius: 10px;
+  border: none;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+
+/* BOTÃO PRINCIPAL */
+
+.botao--primario {
+  background: #8b3f2d;
+  color: white;
+}
+
+.botao--primario:hover {
+  background: #722f21;
+}
+
+.botao--primario:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+
+/* BOTÃO CANCELAR */
+
+.botao--texto {
+  background: transparent;
+  color: #8b3f2d;
+}
+
+.botao--texto:hover {
+  background: #f7efeb;
+}
+
+
+/* ============================= */
+/* RESPONSIVIDADE */
+/* ============================= */
+
+@media (max-width: 600px) {
+
+  .formulario-container {
+    max-width: 100%;
+  }
+
+  .titulo-cadastro h1 {
+    font-size: 27px;
+  }
+
+  .titulo-cadastro p {
+    font-size: 14px;
+  }
+
+  .ficha {
+    padding: 24px 20px;
+  }
+}

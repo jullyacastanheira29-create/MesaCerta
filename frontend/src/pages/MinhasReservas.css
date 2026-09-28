@@ -1,0 +1,538 @@
+/* ========================================
+   CONTAINER PRINCIPAL
+======================================== */
+
+.reservas-container {
+  width: 100%;
+  min-height: 100vh;
+
+  padding: 75px 70px 95px;
+
+  background: #fffaf6;
+
+  color: #422c25;
+
+  font-family:
+    "Segoe UI",
+    Arial,
+    sans-serif;
+}
+
+
+/* ========================================
+   CABEÇALHO
+======================================== */
+
+.reservas-cabecalho {
+  display: flex;
+
+  align-items: flex-end;
+
+  justify-content: space-between;
+
+  gap: 40px;
+
+  max-width: 1250px;
+
+  margin: 0 auto 55px;
+}
+
+.reservas-etiqueta {
+  display: inline-block;
+
+  margin-bottom: 13px;
+
+  color: #a14b3e;
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  letter-spacing: 2px;
+}
+
+.reservas-cabecalho h1 {
+  margin: 0;
+
+  color: #4b3028;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 46px;
+
+  font-weight: 500;
+
+  line-height: 1.1;
+
+  letter-spacing: -1px;
+}
+
+.reservas-cabecalho p {
+  margin: 13px 0 0;
+
+  color: #92786d;
+
+  font-size: 14px;
+
+  line-height: 1.7;
+}
+
+
+/* ========================================
+   BOTÃO NOVA RESERVA
+======================================== */
+
+.botao-nova-reserva {
+  min-height: 48px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 13px 20px;
+
+  border: none;
+
+  border-radius: 7px;
+
+  background: #4a2c25;
+
+  color: #fff9f4;
+
+  font-family: inherit;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  white-space: nowrap;
+
+  transition: 0.25s ease;
+}
+
+.botao-nova-reserva:hover {
+  background: #a64c3e;
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 10px 22px rgba(78, 45, 36, 0.13);
+}
+
+
+/* ========================================
+   LISTA DE RESERVAS
+======================================== */
+
+.lista-reservas {
+  max-width: 1250px;
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 18px;
+}
+
+
+/* ========================================
+   CARD DA RESERVA
+======================================== */
+
+.reserva-card {
+  position: relative;
+
+  padding: 30px;
+
+  border: 1px solid #eadbd2;
+
+  border-radius: 14px;
+
+  background: #fffdfb;
+
+  transition: 0.25s ease;
+}
+
+.reserva-card:hover {
+  border-color: #cda99b;
+
+  transform: translateY(-4px);
+
+  box-shadow:
+    0 14px 30px rgba(78, 45, 36, 0.07);
+}
+
+
+/* ========================================
+   RESTAURANTE
+======================================== */
+
+.reserva-restaurante {
+  padding-bottom: 23px;
+
+  border-bottom: 1px solid #eadbd2;
+}
+
+.restaurante-label {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: #a14b3e;
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  letter-spacing: 2px;
+
+  text-transform: uppercase;
+}
+
+.reserva-restaurante h2 {
+  margin: 0;
+
+  color: #4b3028;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 27px;
+
+  font-weight: 500;
+
+  line-height: 1.2;
+}
+
+.restaurante-tipo {
+  display: inline-block;
+
+  margin-top: 9px;
+
+  color: #987e72;
+
+  font-size: 12px;
+}
+
+
+/* ========================================
+   DADOS DA RESERVA
+======================================== */
+
+.reserva-card__dados {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 15px;
+
+  padding: 25px 0;
+}
+
+.dado-reserva {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 10px;
+}
+
+.dado-icone {
+  width: 31px;
+  height: 31px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border: 1px solid #e2cec4;
+
+  border-radius: 50%;
+
+  background: #f8e9de;
+
+  font-size: 13px;
+}
+
+.dado-reserva strong {
+  display: block;
+
+  margin-bottom: 4px;
+
+  color: #71574e;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.5px;
+}
+
+.dado-reserva span {
+  display: block;
+
+  color: #51352c;
+
+  font-size: 12px;
+
+  line-height: 1.4;
+}
+
+
+/* ========================================
+   AÇÕES
+======================================== */
+
+.reserva-card__acoes {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  padding-top: 20px;
+
+  border-top: 1px solid #eadbd2;
+}
+
+.botao-editar,
+.botao-cancelar {
+  min-height: 40px;
+
+  padding: 10px 14px;
+
+  border-radius: 7px;
+
+  font-family: inherit;
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.25s ease;
+}
+
+
+/* ========================================
+   EDITAR
+======================================== */
+
+.botao-editar {
+  border: 1px solid #cda99b;
+
+  background: #f8e9de;
+
+  color: #713a30;
+}
+
+.botao-editar:hover {
+  background: #eed9cc;
+
+  border-color: #b8897a;
+
+  transform: translateY(-1px);
+}
+
+
+/* ========================================
+   CANCELAR
+======================================== */
+
+.botao-cancelar {
+  border: 1px solid #eadbd2;
+
+  background: transparent;
+
+  color: #987e72;
+}
+
+.botao-cancelar:hover {
+  border-color: #c99a8d;
+
+  background: #fff1ee;
+
+  color: #a14b3e;
+}
+
+
+/* ========================================
+   ESTADO SEM RESERVAS
+======================================== */
+
+.sem-reservas {
+  max-width: 650px;
+
+  margin: 80px auto 0;
+
+  padding: 55px 35px;
+
+  text-align: center;
+
+  border: 1px solid #eadbd2;
+
+  border-radius: 14px;
+
+  background: #fffdfb;
+
+  box-shadow:
+    0 12px 30px rgba(78, 45, 36, 0.04);
+}
+
+.sem-reservas-icone {
+  width: 58px;
+  height: 58px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  margin: 0 auto 22px;
+
+  border: 1px solid #d9bbae;
+
+  border-radius: 50%;
+
+  background: #f8e9de;
+
+  font-size: 23px;
+}
+
+.sem-reservas h2 {
+  margin: 0;
+
+  color: #4b3028;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 27px;
+
+  font-weight: 500;
+}
+
+.sem-reservas p {
+  max-width: 440px;
+
+  margin: 13px auto 25px;
+
+  color: #92786d;
+
+  font-size: 13px;
+
+  line-height: 1.8;
+}
+
+.sem-reservas .botao-nova-reserva {
+  margin: 0 auto;
+}
+
+
+/* ========================================
+   RESPONSIVIDADE
+======================================== */
+
+@media (max-width: 1000px) {
+
+  .reservas-container {
+    padding: 65px 45px 80px;
+  }
+
+  .reservas-cabecalho {
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    margin-bottom: 45px;
+  }
+
+  .lista-reservas {
+    grid-template-columns: 1fr;
+  }
+
+  .reserva-card__dados {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+
+@media (max-width: 700px) {
+
+  .reservas-container {
+    padding: 50px 25px 65px;
+  }
+
+  .reservas-cabecalho {
+    gap: 25px;
+  }
+
+  .reservas-cabecalho h1 {
+    font-size: 37px;
+  }
+
+  .reservas-cabecalho p {
+    font-size: 13px;
+  }
+
+  .botao-nova-reserva {
+    width: 100%;
+  }
+
+  .reserva-card {
+    padding: 24px;
+  }
+
+  .reserva-restaurante h2 {
+    font-size: 24px;
+  }
+
+  .reserva-card__dados {
+    grid-template-columns: 1fr;
+
+    gap: 18px;
+  }
+
+  .reserva-card__acoes {
+    flex-direction: column;
+
+    align-items: stretch;
+  }
+
+  .botao-editar,
+  .botao-cancelar {
+    width: 100%;
+  }
+
+  .sem-reservas {
+    margin-top: 50px;
+
+    padding: 45px 24px;
+  }
+
+  .sem-reservas h2 {
+    font-size: 24px;
+  }
+}
+
